@@ -52,6 +52,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom app colors
+				editor: {
+					bg: 'hsl(var(--editor-bg))'
+				},
+				chat: {
+					bg: 'hsl(var(--chat-bg))'
+				},
+				preview: {
+					bg: 'hsl(var(--preview-bg))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
