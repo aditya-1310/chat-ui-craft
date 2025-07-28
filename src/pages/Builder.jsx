@@ -347,21 +347,26 @@ export default GeneratedComponent;`;
           />
         </div>
 
-        {/* Bottom Section - Resizable Chat and Code */}
-        <div className="h-1/2 p-4 pt-0">
-          <ResizablePanels defaultSizes={[50, 50]}>
+        {/* Bottom Section - Chat and Code Layout */}
+        <div className="h-1/2 flex flex-col">
+          {/* Chat Section - Full Width */}
+          <div className="h-2/3 bg-muted/30 border-t">
             <ChatInterface
               sessionId={activeSessionId}
               messages={messages}
               onSendMessage={handleSendMessage}
               isLoading={isLoading}
             />
+          </div>
+          
+          {/* Code Section - Scrollable */}
+          <div className="h-1/3 border-t bg-card">
             <CodeEditor
               generatedCode={generatedCode}
               generatedFiles={generatedFiles}
               sessionId={activeSessionId}
             />
-          </ResizablePanels>
+          </div>
         </div>
       </div>
     </div>
